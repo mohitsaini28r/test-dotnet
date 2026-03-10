@@ -1,0 +1,76 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "SeleniumSample/1.0.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.41.0",
+          "Selenium.WebDriver.ChromeDriver": "145.0.7632.11700",
+          "Selenium.WebDriver.GeckoDriver": "0.36.0"
+        },
+        "runtime": {
+          "SeleniumSample.dll": {}
+        }
+      },
+      "Selenium.WebDriver/4.41.0": {
+        "runtime": {
+          "lib/net8.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux/native/selenium-manager": {
+            "rid": "linux",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx/native/selenium-manager": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win/native/selenium-manager.exe": {
+            "rid": "win",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/145.0.7632.11700": {},
+      "Selenium.WebDriver.GeckoDriver/0.36.0": {}
+    }
+  },
+  "libraries": {
+    "SeleniumSample/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Selenium.WebDriver/4.41.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oQPPzUGYy7M5+m3cMlGUKiswVLX/TbGySKH0jHsT0B9ZNfPZO6b0aqKNopR0FmDbSgjUsHoA9Vdur81/WW4DGg==",
+      "path": "selenium.webdriver/4.41.0",
+      "hashPath": "selenium.webdriver.4.41.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.ChromeDriver/145.0.7632.11700": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UfgVB5oGDbiUTwBp1Sk66pg8EA40rHwl0ZTwSidOp1W1Ga0mw7wJRKqUT+j+G9/mX9et2Z5A+OyKxw/GCz+hBw==",
+      "path": "selenium.webdriver.chromedriver/145.0.7632.11700",
+      "hashPath": "selenium.webdriver.chromedriver.145.0.7632.11700.nupkg.sha512"
+    },
+    "Selenium.WebDriver.GeckoDriver/0.36.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jUdrPcwkVt8OJon4iWv6pNTPIAdViJYB9cbd4ct0Bt2RzPzynQiN8bBUfOA1iSxTppI9SH8L1eMfg5NRijlBsw==",
+      "path": "selenium.webdriver.geckodriver/0.36.0",
+      "hashPath": "selenium.webdriver.geckodriver.0.36.0.nupkg.sha512"
+    }
+  }
+}
