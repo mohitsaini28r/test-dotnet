@@ -2,6 +2,9 @@
 bin/
 obj/
 
+# Environment / secrets
+.env
+
 # Generated files
 packages.txt
 test.har
