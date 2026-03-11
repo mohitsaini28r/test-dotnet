@@ -19,8 +19,8 @@ env:
   NUGET_PACKAGES: 'C:\nuget_global_cache'
   NUGET_HTTP_CACHE_PATH: 'C:\nuget_http_cache'
   NUGET_PLUGINS_CACHE_PATH: 'C:\nuget_plugins_cache'
-  LT_USERNAME: mohitsainitestmuai
-  LT_ACCESS_KEY: LT_OYGhuds5x407xfZ1o33IrUq134mf1qDBsdzVqSSzIfI21Re
+  LT_USERNAME: ""
+  LT_ACCESS_KEY: ""
 
 pre:
   - ls -la
