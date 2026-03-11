@@ -67,6 +67,8 @@ public class WebDriverFactory
                 opts.AddArgument($"--user-agent={_config.UserAgent}");
                 if (_config.Headless)
                     opts.AddArgument("--headless=new");
+                // Enable CDP network events via performance log (used for HAR capture)
+                opts.SetLoggingPreference(LogType.Performance, LogLevel.All);
                 if (_ltConfig is not null)
                     opts.AddAdditionalOption("LT:Options", BuildLtOptions());
                 return opts;
@@ -105,6 +107,7 @@ public class WebDriverFactory
             ["visual"]           = _ltConfig.Visual,
             ["selenium_version"] = _ltConfig.SeleniumVer,
             ["w3c"]              = true,
+            ["seCdp"]            = true,   // exposes se:cdp URL so GetDevToolsSession() works for CDP UA override
         };
 
         if (_ltConfig.Accessibility)

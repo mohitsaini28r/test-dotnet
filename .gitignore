@@ -1,0 +1,15 @@
+# Build outputs
+bin/
+obj/
+
+# Generated files
+packages.txt
+test.har
+hyperexecute-cli.log
+
+# HyperExecute binary and metadata
+hyperexecute
+hyperexecute.exe
+hyperexecuteupdate
+.hyperexecute/
+.updatedhyperexecute.yaml

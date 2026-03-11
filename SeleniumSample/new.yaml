@@ -1,0 +1,48 @@
+---
+version: 0.1
+globalTimeout: 90
+testSuiteTimeout: 90
+testSuiteStep: 90
+
+runson: win
+
+concurrency: 1
+
+autosplit: true
+
+retryOnFailure: false
+
+maxRetries: 1
+shell: bash
+
+env:
+  NUGET_PACKAGES: 'C:\nuget_global_cache'
+  NUGET_HTTP_CACHE_PATH: 'C:\nuget_http_cache'
+  NUGET_PLUGINS_CACHE_PATH: 'C:\nuget_plugins_cache'
+  LT_USERNAME: mohitsainitestmuai
+  LT_ACCESS_KEY: LT_OYGhuds5x407xfZ1o33IrUq134mf1qDBsdzVqSSzIfI21Re
+
+pre:
+  - ls -la
+  - dotnet restore SeleniumSample.csproj
+  - dotnet list SeleniumSample.csproj package > packages.txt
+  - nuget locals all -clear
+  - dotnet build SeleniumSample.csproj -c Release
+
+cacheKey: '{{ checksum "packages.txt" }}'
+
+runtime:
+  language: dotnet
+  version: "9.0"
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep -lr 'public async Task RunAsync' --include=*.cs .
+
+post:
+  - cat test.har
+
+testRunnerCommand: dotnet run --project SeleniumSample.csproj -c Release -- --grid --demo
+
+jobLabel: [selenium-dotnet-cdp-ua-demo, win]
