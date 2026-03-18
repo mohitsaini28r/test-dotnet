@@ -44,3 +44,8 @@ post:
 testRunnerCommand: dotnet run --project SeleniumSample.csproj -c Release -- --grid --demo
 
 jobLabel: [selenium-dotnet-cdp-ua-demo, win]
+
+uploadArtefacts:
+  - name: TestResults
+    path:
+      - TestResults/
